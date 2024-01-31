@@ -9,29 +9,22 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] IntVariable playerHealth;
     [SerializeField] IntVariable startingHealth;
     [SerializeField] GameObject damageTextPrefab;
-    [SerializeField] IntEventChannel playerDamageChannel;
     int currentHealth;
 
-    void Start()
-    {
+
+    void Start(){
         playerHealth.Value = startingHealth.Value;
     }
-    void OnEnable(){
-        playerDamageChannel.OnEventRaised += takeDamage;
-    }
 
-    void OnDisable(){
-        playerDamageChannel.OnEventRaised -= takeDamage;
-    }
-    void takeDamage(int damage){
+    public void takeDamage(Component sender, object data){
         GameObject damageText = Instantiate(damageTextPrefab, transform.position, Quaternion.identity);
-        playerHealth.Value -= damage;
+        playerHealth.Value -= (int)data;
         if(playerHealth.Value <= 0){
-            damageText.GetComponent<DamageText>().popUp(damage.ToString() + "\nDEAD");
+            damageText.GetComponent<DamageText>().popUp(data.ToString());
             Destroy(gameObject);
         }
         else 
-            damageText.GetComponent<DamageText>().popUp(damage.ToString());
+            damageText.GetComponent<DamageText>().popUp(data.ToString());
 
     }
 }
