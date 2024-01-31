@@ -16,15 +16,26 @@ public class PlayerHealth : MonoBehaviour
         playerHealth.Value = startingHealth.Value;
     }
 
-    public void takeDamage(Component sender, object data){
+    // public void takeDamage(Component sender, object data){
+    //     GameObject damageText = Instantiate(damageTextPrefab, transform.position, Quaternion.identity);
+    //     playerHealth.Value -= (int)data;
+    //     if(playerHealth.Value <= 0){
+    //         damageText.GetComponent<DamageText>().popUp(data.ToString());
+    //         Destroy(gameObject);
+    //     }
+    //     else 
+    //         damageText.GetComponent<DamageText>().popUp(data.ToString());
+
+    // }
+    public void takeDamage(int damage){
         GameObject damageText = Instantiate(damageTextPrefab, transform.position, Quaternion.identity);
-        playerHealth.Value -= (int)data;
+        playerHealth.Value -= damage;
         if(playerHealth.Value <= 0){
-            damageText.GetComponent<DamageText>().popUp(data.ToString());
+            damageText.GetComponent<DamageText>().popUp(damage.ToString());
             Destroy(gameObject);
         }
         else 
-            damageText.GetComponent<DamageText>().popUp(data.ToString());
+            damageText.GetComponent<DamageText>().popUp(damage.ToString());
 
     }
 }

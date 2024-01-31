@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  playerDamageChannel: {fileID: 11400000, guid: 71ef3a956aa4d794787c1ba6f4b70b6d,
+  playerDamageChannel: {fileID: 11400000, guid: b34b07c0f4ca66a46aef9d0db75f787c,
     type: 2}
 --- !u!54 &-1584388598806647426
 Rigidbody:

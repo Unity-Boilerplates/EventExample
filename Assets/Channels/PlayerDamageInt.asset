@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9c9eec2b19069340a1b451829bc3d57, type: 3}
-  m_Name: PlayerHealth
+  m_Script: {fileID: 11500000, guid: 8a57250e7f08d9449825b3f60f17da0d, type: 3}
+  m_Name: PlayerDamageInt
   m_EditorClassIdentifier: 
-  Value: 60
