@@ -6,13 +6,15 @@ public class PlayerHealth : MonoBehaviour
 {
 
 
-    [SerializeField] private int maxHealth = 100;
+    [SerializeField] IntVariable playerHealth;
+    [SerializeField] IntVariable startingHealth;
     [SerializeField] GameObject damageTextPrefab;
     [SerializeField] IntEventChannel playerDamageChannel;
     int currentHealth;
+
     void Start()
     {
-        currentHealth = maxHealth;
+        playerHealth.Value = startingHealth.Value;
     }
     void OnEnable(){
         playerDamageChannel.OnEventRaised += takeDamage;
@@ -23,8 +25,8 @@ public class PlayerHealth : MonoBehaviour
     }
     void takeDamage(int damage){
         GameObject damageText = Instantiate(damageTextPrefab, transform.position, Quaternion.identity);
-        currentHealth -= damage;
-        if(currentHealth <= 0){
+        playerHealth.Value -= damage;
+        if(playerHealth.Value <= 0){
             damageText.GetComponent<DamageText>().popUp(damage.ToString() + "\nDEAD");
             Destroy(gameObject);
         }

@@ -310,7 +310,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2916191122ed9c4ba46e1d4523d54cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  playerHealth: {fileID: 11400000, guid: 5a30a25ea01286f4f8d6c7b5673e10ba, type: 2}
+  startingHealth: {fileID: 11400000, guid: a74ec24d8c03e89479caec0a0a31a8bf, type: 2}
+  resetHealth: 1
   damageTextPrefab: {fileID: 2043790251869940535, guid: 11fd670b03a758f4cb5775aed9e8d969,
     type: 3}
   playerDamageChannel: {fileID: 11400000, guid: ebbc20d058dd95a48b95ce18f8812a6a,
