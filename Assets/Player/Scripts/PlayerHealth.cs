@@ -8,13 +8,20 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] private int maxHealth = 100;
     [SerializeField] GameObject damageTextPrefab;
+    [SerializeField] IntEventChannel playerDamageChannel;
     int currentHealth;
     void Start()
     {
         currentHealth = maxHealth;
     }
+    void OnEnable(){
+        playerDamageChannel.OnEventRaised += takeDamage;
+    }
 
-    public void takeDamage(int damage){
+    void OnDisable(){
+        playerDamageChannel.OnEventRaised -= takeDamage;
+    }
+    void takeDamage(int damage){
         GameObject damageText = Instantiate(damageTextPrefab, transform.position, Quaternion.identity);
         currentHealth -= damage;
         if(currentHealth <= 0){

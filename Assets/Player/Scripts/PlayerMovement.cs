@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("Parameters")]
+    [Header("General")]
 
     [SerializeField] private Rigidbody rb;
     //[SerializeField] private SoundPlayer sP;
@@ -36,11 +36,15 @@ public class PlayerMovement : MonoBehaviour
         currentMoveForce = moveForceNormal;
     }
 
+
+
     void Update()
     {
         checkGround();
     }
 
+    void OnEnable(){
+    }
     private void checkGround()
     {
         bool prev = grounded;
@@ -98,6 +102,8 @@ public class PlayerMovement : MonoBehaviour
         if (grounded)
             rb.velocity = new Vector3(rb.velocity.x, jumpVelocity, rb.velocity.z);
     }
+
+
 
     void OnDrawGizmosSelected()
     {

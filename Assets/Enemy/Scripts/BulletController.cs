@@ -5,10 +5,11 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
    [SerializeField] int damage = 10;
+   [SerializeField] IntEventChannel playerDamageChannel;
 
     void OnCollisionEnter(Collision collision){
          if(collision.gameObject.tag == "Player"){
-              collision.gameObject.GetComponent<PlayerHealth>().takeDamage(damage);
+              playerDamageChannel.RaiseEvent(damage);
          }
         Destroy(gameObject);
 
