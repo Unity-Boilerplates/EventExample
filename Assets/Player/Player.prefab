@@ -149,11 +149,11 @@ GameObject:
   - component: {fileID: 5303565630454092360}
   - component: {fileID: 5768995307418234514}
   - component: {fileID: 3524756927518038535}
+  - component: {fileID: 3991732951521460337}
   - component: {fileID: 313320554309514949}
   - component: {fileID: 3030047475449271998}
-  - component: {fileID: 3991732951521460337}
-  - component: {fileID: 8292579829708144862}
   - component: {fileID: 7354197384017879696}
+  - component: {fileID: 6478587805404663196}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -278,44 +278,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!114 &313320554309514949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6074788834761245763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6b8bc1e14e2f34408ff727050987c29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 3524756927518038535}
-  drag: 1.7
-  moveForceNormal: 150
-  maxVelocity: 15
-  jumpVelocity: 20
-  groundCheck: {fileID: 7618746663468454489}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  groundCheckLenght: 0.588
---- !u!114 &3030047475449271998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6074788834761245763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2916191122ed9c4ba46e1d4523d54cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: {fileID: 11400000, guid: 5a30a25ea01286f4f8d6c7b5673e10ba, type: 2}
-  startingHealth: {fileID: 11400000, guid: a74ec24d8c03e89479caec0a0a31a8bf, type: 2}
-  damageTextPrefab: {fileID: 2043790251869940535, guid: 11fd670b03a758f4cb5775aed9e8d969,
-    type: 3}
 --- !u!114 &3991732951521460337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,34 +389,44 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &8292579829708144862
+--- !u!114 &313320554309514949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6074788834761245763}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d565fcd7eafe26409a11a511f87f0bb, type: 3}
+  m_Script: {fileID: 11500000, guid: f6b8bc1e14e2f34408ff727050987c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 71ef3a956aa4d794787c1ba6f4b70b6d, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3030047475449271998}
-        m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
-        m_MethodName: takeDamage
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  rb: {fileID: 3524756927518038535}
+  drag: 1.7
+  moveForceNormal: 150
+  maxVelocity: 15
+  jumpVelocity: 20
+  groundCheck: {fileID: 7618746663468454489}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  groundCheckLenght: 0.588
+--- !u!114 &3030047475449271998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6074788834761245763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2916191122ed9c4ba46e1d4523d54cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: {fileID: 11400000, guid: 5a30a25ea01286f4f8d6c7b5673e10ba, type: 2}
+  startingHealth: {fileID: 11400000, guid: a74ec24d8c03e89479caec0a0a31a8bf, type: 2}
+  damageTextPrefab: {fileID: 2043790251869940535, guid: 11fd670b03a758f4cb5775aed9e8d969,
+    type: 3}
 --- !u!114 &7354197384017879696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,3 +455,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6478587805404663196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6074788834761245763}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f0b6c1b63b6194f928e03585e542c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 461ace2a8745fe14c9e6295cdc54aabf, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls: []
