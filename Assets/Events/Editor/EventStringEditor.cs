@@ -3,8 +3,8 @@ using UnityEditor;
 using UnityEngine;
 
 
-[CustomEditor(typeof(GameEventInt), editorForChildClasses: true)]
-public class EventIntEditor : Editor
+[CustomEditor(typeof(GameEventString), editorForChildClasses: true)]
+public class EventStringEditor : Editor
 {
     string data;
     public override void OnInspectorGUI()
@@ -13,14 +13,13 @@ public class EventIntEditor : Editor
 
         GUI.enabled = Application.isPlaying;
 
-        GameEventInt e = target as GameEventInt;
+        GameEventString e = target as GameEventString;
 
-        GUILayout.Label("Data to send - int");
+        GUILayout.Label("Data to send - String");
         data = GUILayout.TextField(data);
         
         if (GUILayout.Button("Raise")){
-            e.Raise(System.Convert.ToInt32(data));
+            e.Raise(data);
         }
     }
 }
-
