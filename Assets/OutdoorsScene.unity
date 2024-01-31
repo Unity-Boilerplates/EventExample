@@ -1136,7 +1136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267159736}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.44472498, y: 0.00000001541119, z: -0.0000000076521065, w: 0.8956672}
+  m_LocalRotation: {x: 0.44472498, y: -0.00000001541119, z: 0.0000000076521065, w: 0.8956672}
   m_LocalPosition: {x: 0, y: 14.18, z: -14.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1338,19 +1338,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1623250410197224790}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1400586974 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3030047475449271998, guid: 62078770e7ce681479b43a02bc6a664b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1623250410197224790}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400586964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2916191122ed9c4ba46e1d4523d54cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1400586981
+--- !u!114 &1400586983
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1359,53 +1347,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1400586964}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d565fcd7eafe26409a11a511f87f0bb, type: 3}
+  m_Script: {fileID: 11500000, guid: a6f0b6c1b63b6194f928e03585e542c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 71ef3a956aa4d794787c1ba6f4b70b6d, type: 2}
+  Event: {fileID: 11400000, guid: 461ace2a8745fe14c9e6295cdc54aabf, type: 2}
   Response:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1400586974}
-        m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
-        m_MethodName: takeDamage
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1400586982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400586964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6eba68f881ccc994bb55e3ffb8edd1d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: b34b07c0f4ca66a46aef9d0db75f787c, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1400586974}
-        m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
-        m_MethodName: takeDamage
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &1629008303
 GameObject:
   m_ObjectHideFlags: 0
@@ -2083,7 +2031,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.44472498, y: 0.00000001541119, z: -0.0000000076521065, w: 0.8956672}
+  m_LocalRotation: {x: 0.44472498, y: -0.00000001541119, z: 0.0000000076521065, w: 0.8956672}
   m_LocalPosition: {x: 0, y: 14.18, z: -14.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2538,18 +2486,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8292579829708144862, guid: 62078770e7ce681479b43a02bc6a664b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6074788834761245763, guid: 62078770e7ce681479b43a02bc6a664b,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1400586981}
-    - targetCorrespondingSourceObject: {fileID: 6074788834761245763, guid: 62078770e7ce681479b43a02bc6a664b,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1400586982}
+      addedObject: {fileID: 1400586983}
   m_SourcePrefab: {fileID: 100100000, guid: 62078770e7ce681479b43a02bc6a664b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

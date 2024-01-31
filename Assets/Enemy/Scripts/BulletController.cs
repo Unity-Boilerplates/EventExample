@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
    [SerializeField] int damage = 10;
-   //[SerializeField] GameEventWithData playerDamageChannel;
+   //[SerializeField] GameEventObject playerDamageChannel;
    [SerializeField] GameEventInt playerDamageChannel;
 
     void OnCollisionEnter(Collision collision){

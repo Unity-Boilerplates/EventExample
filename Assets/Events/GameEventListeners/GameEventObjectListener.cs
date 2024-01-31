@@ -3,9 +3,9 @@ using UnityEngine.Events;
 
 [System.Serializable]
 public class CustomGameEvent : UnityEvent<Component, object> { }
-public class GameEventWithDataListener : MonoBehaviour
+public class GameEventObjectListener : MonoBehaviour
 {
-    public GameEventWithData Event;
+    public GameEventObject Event;
 
     public CustomGameEvent Response;
 

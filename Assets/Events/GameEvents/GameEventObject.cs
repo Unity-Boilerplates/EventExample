@@ -2,11 +2,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu]
-public class GameEventWithData : ScriptableObject
+[CreateAssetMenu(fileName = "New Game Object Event", menuName = "Events/Game Event Object", order = 52)]
+public class GameEventObject : ScriptableObject
 {
 
-    private readonly List<GameEventWithDataListener> eventListeners = new List<GameEventWithDataListener>();
+    private readonly List<GameEventObjectListener> eventListeners = new List<GameEventObjectListener>();
 
     public void Raise(Component sender, object data)
     {
@@ -14,13 +14,13 @@ public class GameEventWithData : ScriptableObject
             eventListeners[i].OnEventRaised(sender,data);
     }
 
-    public void RegisterListener(GameEventWithDataListener listener)
+    public void RegisterListener(GameEventObjectListener listener)
     {
         if (!eventListeners.Contains(listener))
             eventListeners.Add(listener);
     }
 
-    public void UnregisterListener(GameEventWithDataListener listener)
+    public void UnregisterListener(GameEventObjectListener listener)
     {
         if (eventListeners.Contains(listener))
             eventListeners.Remove(listener);
