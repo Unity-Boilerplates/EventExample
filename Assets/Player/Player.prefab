@@ -152,6 +152,8 @@ GameObject:
   - component: {fileID: 313320554309514949}
   - component: {fileID: 3030047475449271998}
   - component: {fileID: 3991732951521460337}
+  - component: {fileID: 8292579829708144862}
+  - component: {fileID: 7354197384017879696}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -312,11 +314,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 11400000, guid: 5a30a25ea01286f4f8d6c7b5673e10ba, type: 2}
   startingHealth: {fileID: 11400000, guid: a74ec24d8c03e89479caec0a0a31a8bf, type: 2}
-  resetHealth: 1
   damageTextPrefab: {fileID: 2043790251869940535, guid: 11fd670b03a758f4cb5775aed9e8d969,
     type: 3}
-  playerDamageChannel: {fileID: 11400000, guid: ebbc20d058dd95a48b95ce18f8812a6a,
-    type: 2}
 --- !u!114 &3991732951521460337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,3 +427,59 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &8292579829708144862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6074788834761245763}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d565fcd7eafe26409a11a511f87f0bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 71ef3a956aa4d794787c1ba6f4b70b6d, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3030047475449271998}
+        m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
+        m_MethodName: takeDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7354197384017879696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6074788834761245763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eba68f881ccc994bb55e3ffb8edd1d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: b34b07c0f4ca66a46aef9d0db75f787c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3030047475449271998}
+        m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
+        m_MethodName: takeDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
