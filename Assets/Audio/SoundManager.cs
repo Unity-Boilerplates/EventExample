@@ -5,6 +5,8 @@ public class SoundManager : MonoBehaviour
 {
     [SerializeField] private AudioMixerGroup mixer;
     [SerializeField] Sound[] sounds;
+    bool isPaused = false;
+
 
     public static SoundManager instance;
 
@@ -19,6 +21,7 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
+
         foreach (Sound s in sounds)
         {
             s.Source = gameObject.AddComponent<AudioSource>();
@@ -58,6 +61,21 @@ public class SoundManager : MonoBehaviour
         {
             if (s.Name.Equals(name) && s.Source.isPlaying)
                 s.Source.Stop();
+        }
+    }
+
+    public void PauseEvent(){
+        foreach (Sound s in sounds)
+        {
+            if (isPaused) {
+                s.Source.Play();
+                isPaused = false;
+            }
+            else {
+                s.Source.Pause();
+                isPaused = true;
+            }
+           
         }
     }
 }

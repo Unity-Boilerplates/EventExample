@@ -4,7 +4,8 @@ Lot of stuff to play with.
 
 
 This project uses:
-* Events to communicate between objects (The bullet collide with player, and send an event to the player to take damage, with the parameter)
+* Events to communicate between objects.
+The bullet collide with player, and send an event to the player to take damage, with the parameter. Also, at pressing start, the player raises the Pause Event, that triggers the menu, and stop the music. If the Pause Event is raised again, it will hide the menu, and reenable the music. Also, Resume and Restart buttons raise the Pause Event to hide the menu, reenable the music, and in the case of restart, reload the scene.
 * Variables in a more wicked  style, using scriptable objects.
 
 ## References

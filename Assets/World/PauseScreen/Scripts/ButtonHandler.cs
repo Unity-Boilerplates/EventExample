@@ -8,13 +8,14 @@ public class ButtonHandler : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] PauseMenu menu;
+    [SerializeField] GameEvent pauseEvent;
 
      public void ResumeButton(){
-        menu.unpause();
+        pauseEvent.Raise();
     }
 
     public void RestartButton(){
-        menu.unpause();
+        pauseEvent.Raise();
         int scene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(scene, LoadSceneMode.Single);    
     }

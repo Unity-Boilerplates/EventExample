@@ -31,20 +31,4 @@ public class PauseMenu : MonoBehaviour
 
     }
 
-   
-
-
-
-    // public void ShowPauseMenu(){
-    //     if(pauseMenu.activeSelf){
-    //         pauseMenu.SetActive(false);
-    //         Time.timeScale = 1f;
-            
-    //     }
-    //     else if(!pauseMenu.activeSelf){
-    //         pauseMenu.SetActive(true);
-    //         Time.timeScale = 0f;
-    //     }
-       
-    // }
 }
