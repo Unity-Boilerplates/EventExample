@@ -153,7 +153,6 @@ GameObject:
   - component: {fileID: 313320554309514949}
   - component: {fileID: 3030047475449271998}
   - component: {fileID: 7354197384017879696}
-  - component: {fileID: 6478587805404663196}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -321,14 +320,6 @@ MonoBehaviour:
     m_ActionId: 7a8dd7b3-7014-4b3c-8248-b7725fe90738
     m_ActionName: Player/Move[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 12e5fbb0-783c-4455-941b-14bee1fe9477
-    m_ActionName: Player/Look[/Mouse/delta]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: f915fc1c-77d9-44b0-9f72-1fff2e62d7f2
-    m_ActionName: Player/Fire[/Mouse/leftButton]
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 313320554309514949}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
@@ -384,6 +375,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: a78824e1-f1cf-4b46-90ce-f17e9cc0292a
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6f8ec3b8-1db8-4729-b798-71f83fe9595c
+    m_ActionName: Player/Pause[/Keyboard/escape]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 80a519ea-da77-46b4-8f0a-63ee95b018b5
+    m_ActionName: UI/GoBack[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -427,6 +426,7 @@ MonoBehaviour:
   startingHealth: {fileID: 11400000, guid: a74ec24d8c03e89479caec0a0a31a8bf, type: 2}
   damageTextPrefab: {fileID: 2043790251869940535, guid: 11fd670b03a758f4cb5775aed9e8d969,
     type: 3}
+  gameOverEvent: {fileID: 11400000, guid: c51f6066186b9b347ab292eaf5d044b4, type: 2}
 --- !u!114 &7354197384017879696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,19 +455,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6478587805404663196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6074788834761245763}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6f0b6c1b63b6194f928e03585e542c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 461ace2a8745fe14c9e6295cdc54aabf, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls: []
