@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9320a5f2668b0334dabb9b811cb09bac, type: 3}
-  m_Name: PlaySound
+  m_Script: {fileID: 11500000, guid: 0e4c3119945662946afd49f3c042a55f, type: 3}
+  m_Name: Pause
   m_EditorClassIdentifier: 
