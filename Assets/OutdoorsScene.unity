@@ -320,6 +320,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a271b4f934766b44f86dba7a24767cba, type: 3}
+--- !u!1 &83859325 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6074788834761245763, guid: 62078770e7ce681479b43a02bc6a664b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1623250410197224790}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &110153061
 GameObject:
   m_ObjectHideFlags: 0
@@ -2494,7 +2500,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267159736}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.44472498, y: 0.00000001541119, z: -0.0000000076521065, w: 0.8956672}
+  m_LocalRotation: {x: 0.44472498, y: -0.00000001541119, z: 0.0000000076521065, w: 0.8956672}
   m_LocalPosition: {x: 0, y: 14.18, z: -14.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2711,6 +2717,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1623250410197224790}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1400586982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83859325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc3a50476321a340b04c5b8a19dd463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pause: {fileID: 11400000, guid: 79f33f6d21a722d4394d058a7b0bd080, type: 2}
 --- !u!1 &1404241328
 GameObject:
   m_ObjectHideFlags: 0
@@ -2915,92 +2934,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1423763007}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a6343a5737e79f4db2e3f667d437775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 8fa9619b35f6c7e42946ef5fc114f3d6,
-    type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
+  Event: {fileID: 11400000, guid: 79f33f6d21a722d4394d058a7b0bd080, type: 2}
+  Response:
     m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7a8dd7b3-7014-4b3c-8248-b7725fe90738
-    m_ActionName: Player/Move[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 84456dd3-a728-4ba7-b983-8b455a8171bd
-    m_ActionName: Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth]
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1423763009}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: HandlePause
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 6f8ec3b8-1db8-4729-b798-71f83fe9595c
-    m_ActionName: Player/Pause[/Keyboard/escape,/XInputControllerWindows/start]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c8aabbef-0ed3-4713-8693-3b69848bfd19
-    m_ActionName: UI/Navigate[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/rightStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/rightStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/rightStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/rightStick/right,/XInputControllerWindows/dpad,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: bf9af111-7395-4766-91ce-cda1e04ece0e
-    m_ActionName: UI/Submit[/Keyboard/enter,/XInputControllerWindows/buttonSouth]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a7316943-1645-4f2c-aa68-9f3a9b9866a8
-    m_ActionName: UI/Cancel[/Keyboard/escape,/XInputControllerWindows/buttonEast]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 73fd792a-6abe-4c10-b5af-67baa80d8e98
-    m_ActionName: UI/Point[/Mouse/position]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c71a307f-dd4c-42df-a2dd-45617c6f6952
-    m_ActionName: UI/Click[/Mouse/leftButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: b8ce6b9b-b7d6-492a-83f8-f8939527eee1
-    m_ActionName: UI/ScrollWheel[/Mouse/scroll]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: fdb8e290-37b3-4800-8878-4e9be9612818
-    m_ActionName: UI/MiddleClick[/Mouse/middleButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0acf430d-5ef9-4ba9-a189-f392619d61b1
-    m_ActionName: UI/RightClick[/Mouse/rightButton]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 28a15aee-1761-40d8-bbec-760e46db4f60
-    m_ActionName: UI/TrackedDevicePosition
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a78824e1-f1cf-4b46-90ce-f17e9cc0292a
-    m_ActionName: UI/TrackedDeviceOrientation
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1423763009}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: unpause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3010,13 +2953,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 80a519ea-da77-46b4-8f0a-63ee95b018b5
-    m_ActionName: UI/GoBack[/Keyboard/escape,/XInputControllerWindows/start]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Gamepad
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1 &1558773669
 GameObject:
   m_ObjectHideFlags: 0
@@ -3828,7 +3764,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.44472498, y: 0.00000001541119, z: -0.0000000076521065, w: 0.8956672}
+  m_LocalRotation: {x: 0.44472498, y: -0.00000001541119, z: 0.0000000076521065, w: 0.8956672}
   m_LocalPosition: {x: 0, y: 14.18, z: -14.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4512,7 +4448,47 @@ PrefabInstance:
     - target: {fileID: 3991732951521460337, guid: 62078770e7ce681479b43a02bc6a664b,
         type: 3}
       propertyPath: m_DefaultControlScheme
-      value: Gamepad
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991732951521460337, guid: 62078770e7ce681479b43a02bc6a664b,
+        type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991732951521460337, guid: 62078770e7ce681479b43a02bc6a664b,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991732951521460337, guid: 62078770e7ce681479b43a02bc6a664b,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991732951521460337, guid: 62078770e7ce681479b43a02bc6a664b,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1400586982}
+    - target: {fileID: 3991732951521460337, guid: 62078770e7ce681479b43a02bc6a664b,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991732951521460337, guid: 62078770e7ce681479b43a02bc6a664b,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991732951521460337, guid: 62078770e7ce681479b43a02bc6a664b,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CallPause, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3991732951521460337, guid: 62078770e7ce681479b43a02bc6a664b,
+        type: 3}
+      propertyPath: m_ActionEvents.Array.data[12].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6074788834761245763, guid: 62078770e7ce681479b43a02bc6a664b,
         type: 3}
@@ -4522,7 +4498,7 @@ PrefabInstance:
     - target: {fileID: 6074788834761245763, guid: 62078770e7ce681479b43a02bc6a664b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6115563463540819425, guid: 62078770e7ce681479b43a02bc6a664b,
         type: 3}
@@ -4577,7 +4553,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6074788834761245763, guid: 62078770e7ce681479b43a02bc6a664b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1400586982}
   m_SourcePrefab: {fileID: 100100000, guid: 62078770e7ce681479b43a02bc6a664b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

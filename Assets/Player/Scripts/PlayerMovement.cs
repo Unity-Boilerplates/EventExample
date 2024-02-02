@@ -99,8 +99,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (grounded)
-            rb.velocity = new Vector3(rb.velocity.x, jumpVelocity, rb.velocity.z);
+        if(context.performed)
+            if (grounded)
+                rb.velocity = new Vector3(rb.velocity.x, jumpVelocity, rb.velocity.z);
     }
 
 
