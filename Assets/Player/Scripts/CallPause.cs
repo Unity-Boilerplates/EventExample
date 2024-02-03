@@ -7,10 +7,6 @@ public class CallPause : MonoBehaviour
 {
     [SerializeField] GameEvent pause;
     
-
-    void Update(){
-        Debug.Log(Time.timeScale);
-    }
     public void OnPause(InputAction.CallbackContext context){
         
         if(context.performed) {
