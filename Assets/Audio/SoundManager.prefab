@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5699879126307183889}
   - component: {fileID: 4853304729661587483}
+  - component: {fileID: 3555991001694190932}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -44,45 +45,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 040bcbb7612dfcf48935ebdbcb2e7ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixer: {fileID: 24300002, guid: f26320cd1ee5d2a42badafac74370818, type: 2}
+  mixer: {fileID: 24300002, guid: 3ff893ad8f1557b43bf770736e524ee2, type: 2}
   sounds:
   - Name: Music
     Source: {fileID: 0}
     Clips:
-    - {fileID: 8300000, guid: 3763d1f715ee38247b1827a3a5cc28d4, type: 3}
+    - {fileID: 8300000, guid: 781edb74785c24d408eda4afbff4a154, type: 3}
     Volume: 1
     Pitch: 1
     Loop: 1
     PlayOnAwake: 1
-  - Name: Farm1
-    Source: {fileID: 0}
-    Clips:
-    - {fileID: 8300000, guid: cc1cb95dacf73be4e9a6318fdf425369, type: 3}
-    Volume: 0.5
-    Pitch: 1
-    Loop: 1
-    PlayOnAwake: 1
-  - Name: Farm2
-    Source: {fileID: 0}
-    Clips:
-    - {fileID: 8300000, guid: 71df25cec64707547bc205a609b1f684, type: 3}
-    Volume: 0.5
-    Pitch: 1
-    Loop: 1
-    PlayOnAwake: 1
-  - Name: Click
-    Source: {fileID: 0}
-    Clips:
-    - {fileID: 8300000, guid: 98d5979de4d863a4d9a0ce192a06b711, type: 3}
-    Volume: 1
-    Pitch: 1
-    Loop: 0
-    PlayOnAwake: 0
-  - Name: Hover
-    Source: {fileID: 0}
-    Clips:
-    - {fileID: 8300000, guid: de4f6abbd3005064496e950afff8ad18, type: 3}
-    Volume: 1
-    Pitch: 1
-    Loop: 0
-    PlayOnAwake: 0
+--- !u!114 &3555991001694190932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246682757761128970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6343a5737e79f4db2e3f667d437775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 79f33f6d21a722d4394d058a7b0bd080, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4853304729661587483}
+        m_TargetAssemblyTypeName: SoundManager, Assembly-CSharp
+        m_MethodName: PauseEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

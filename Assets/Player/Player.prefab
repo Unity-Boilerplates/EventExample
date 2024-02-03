@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 313320554309514949}
   - component: {fileID: 3030047475449271998}
   - component: {fileID: 7354197384017879696}
+  - component: {fileID: 5117933317324708344}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -344,7 +345,19 @@ MonoBehaviour:
     m_ActionId: bf9af111-7395-4766-91ce-cda1e04ece0e
     m_ActionName: UI/Submit[/Keyboard/enter]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5117933317324708344}
+        m_TargetAssemblyTypeName: CallPause, Assembly-CSharp
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: a7316943-1645-4f2c-aa68-9f3a9b9866a8
     m_ActionName: UI/Cancel[/Keyboard/escape]
   - m_PersistentCalls:
@@ -376,11 +389,35 @@ MonoBehaviour:
     m_ActionId: a78824e1-f1cf-4b46-90ce-f17e9cc0292a
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5117933317324708344}
+        m_TargetAssemblyTypeName: CallPause, Assembly-CSharp
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 6f8ec3b8-1db8-4729-b798-71f83fe9595c
     m_ActionName: Player/Pause[/Keyboard/escape]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5117933317324708344}
+        m_TargetAssemblyTypeName: CallPause, Assembly-CSharp
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 80a519ea-da77-46b4-8f0a-63ee95b018b5
     m_ActionName: UI/GoBack[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
@@ -455,3 +492,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5117933317324708344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6074788834761245763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbc3a50476321a340b04c5b8a19dd463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pause: {fileID: 11400000, guid: 79f33f6d21a722d4394d058a7b0bd080, type: 2}
